@@ -4,9 +4,18 @@
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Run%20a%20CleanedWeb%20API-2088ff?logo=github)](https://github.com/marketplace/actions/run-a-cleanedweb-api) [![CI](https://github.com/cleanedweb/run-api-action/actions/workflows/ci.yml/badge.svg)](https://github.com/cleanedweb/run-api-action/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/cleanedweb/run-api-action/blob/main/LICENSE)
 
-A GitHub Action that runs a [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=run-api-action) catalog API and writes the records to a file in your workspace. Use it to keep a dataset in git, refresh a CSV on a schedule, or feed the next step of a workflow.
+**Scrapers break whenever a site changes its pages.** CleanedWeb is a catalog of maintained REST APIs
+for public websites (listings, products, jobs, articles, profiles): you call an API and get structured
+records with known fields. When a site changes, CleanedWeb rebuilds its API.
 
-CleanedWeb turns public website collections into maintained REST APIs that return structured records. You get 5,000 records free once, then prepaid credit from $1 per 1,000 records; a run is charged per record delivered.
+This GitHub Action runs a [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=run-api-action) catalog API and writes the records to a file in your workspace.
+
+- Keep a dataset in git, refresh a CSV on a schedule, or feed the next step of a workflow.
+- Writes `json`, `jsonl` or `csv`; outputs the record count, run id, stop reason and units charged.
+- A step retried inside the same workflow attempt gets the original run back instead of paying twice.
+- Pin an API major version so a new major cannot change your results.
+
+You get 5,000 records free once, then prepaid credit from $1 per 1,000 records; a run is charged per record delivered.
 
 ## Quick start
 
